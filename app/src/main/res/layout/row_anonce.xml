@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/img1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt1"
+            android:layout_centerHorizontal="true"
+
+            android:text="Titre de l`anonce"
+            android:textSize="25dp"
+            android:layout_below="@id/img1"
+            android:textStyle="bold"
+            android:textColor="#000"
+
+            />
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt2"
+            android:text="Laayoune"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:layout_below="@id/txt1"
+            android:textColor="#000"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt3"
+            android:text="demande"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"
+            android:layout_below="@id/txt2"
+            android:textColor="#000"
+
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

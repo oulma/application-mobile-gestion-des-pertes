@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "782018233914",
+    "firebase_url": "https://gestion-des-pertes-default-rtdb.firebaseio.com",
+    "project_id": "gestion-des-pertes",
+    "storage_bucket": "gestion-des-pertes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782018233914:android:f092f1a2ebcca5389b9703",
+        "android_client_info": {
+          "package_name": "com.ceft.gestionperte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782018233914-h8kfj0gjck0hlhp1eiulcl9mbudhp34h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClIzeg05PwFD1crWUTeiZfeq3U6VhXwII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782018233914-h8kfj0gjck0hlhp1eiulcl9mbudhp34h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782018233914:android:d791f2a1388820039b9703",
+        "android_client_info": {
+          "package_name": "com.ceft.perto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782018233914-h8kfj0gjck0hlhp1eiulcl9mbudhp34h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClIzeg05PwFD1crWUTeiZfeq3U6VhXwII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782018233914-h8kfj0gjck0hlhp1eiulcl9mbudhp34h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
