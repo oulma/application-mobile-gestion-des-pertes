@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ceft.perto.Model.Annonce;
+import com.ceft.perto.ui.home.HomeFragment;
 
 import java.util.ArrayList;
 
@@ -36,6 +37,7 @@ public class AnnanceAdapter  extends RecyclerView.Adapter<AnnanceAdapter.Annonce
 
     @Override
     public void onBindViewHolder(@NonNull AnnonceViewHolder holder, int position) {
+
 
         final Annonce ann=listAnn.get(position);
         holder.t1.setText(ann.getTitre());

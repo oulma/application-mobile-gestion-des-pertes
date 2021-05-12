@@ -26,14 +26,17 @@ public class annonceDetailActivity extends AppCompatActivity {
         tv2=(TextView)findViewById(R.id.ann_desc);
         tv3=(TextView)findViewById(R.id.ann_ville);
         tv4=(TextView)findViewById(R.id.ann_contact);
-        Uri myUri = Uri.parse(getIntent().getStringExtra("imagename"));
 
-        img.setImageURI(myUri);
+        Glide.with(this)
+                .load(getIntent().getStringExtra("imagename"))
+                .placeholder(R.mipmap.ic_launcher)
+                .into(img);
        // img.setImageResource(getIntent().getStringExtra("imagename"));
         tv1.setText(getIntent().getStringExtra("Titre"));
         tv2.setText(getIntent().getStringExtra("desc"));
         tv3.setText(getIntent().getStringExtra("ville"));
         tv4.setText(getIntent().getStringExtra("tel"));
+
 
     }
 }

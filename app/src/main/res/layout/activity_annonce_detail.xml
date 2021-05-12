@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/ann_img"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:src="@mipmap/ic_launcher" />
@@ -23,28 +23,30 @@
         android:layout_gravity="center_horizontal"
         android:text="Dummy Header"
         android:textColor="#000"
-        android:textSize="25dp"
+        android:textSize="35dp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/ann_desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
         android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
         android:text="Dummy Description"
-        android:textSize="25dp" />
+        android:textSize="25dp"
+        android:padding="20dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_marginVertical="175dp"
+        android:layout_marginBottom="50dp"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,7 +59,8 @@
                     android:layout_marginLeft="20dp"
 
                     android:text="Ville: "
-                    android:textSize="25dp"
+                    android:textSize="30dp"
+                    android:textColor="@color/black"
                     android:textStyle="normal" />
 
                 <TextView
@@ -67,6 +70,8 @@
                     android:layout_marginLeft="20dp"
                     android:text="Contact: "
                     android:textSize="25dp"
+                    android:textColor="@color/black"
+
                     android:textStyle="normal" />
             </LinearLayout>
             <LinearLayout
@@ -81,7 +86,9 @@
                     android:layout_marginLeft="20dp"
 
                     android:text="Contact: "
-                    android:textSize="25dp"
+                    android:textSize="30dp"
+                    android:textColor="@color/black"
+
                     android:textStyle="normal" />
 
                 <TextView
@@ -91,6 +98,7 @@
                     android:layout_marginLeft="20dp"
                     android:text="Contact: "
                     android:textSize="25dp"
+                    android:textColor="@color/black"
                     android:textStyle="normal" />
             </LinearLayout>
 

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#3F51B5"
+    android:background="@color/grey"
     android:orientation="vertical">
 
 
@@ -233,7 +233,8 @@
                             android:id="@+id/btn_img"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Upload" />
+                            android:text="Upload"
+                            />
 
                     </RelativeLayout>
 
@@ -268,7 +269,6 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_below="@id/ville"
                         android:layout_marginLeft="40dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="40dp"

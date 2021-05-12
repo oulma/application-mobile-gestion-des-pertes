@@ -30,9 +30,9 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/imageView"
-                    android:layout_width="140dp"
+                    android:layout_width="124dp"
                     android:layout_height="93dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="16dp"
@@ -40,12 +40,12 @@
                     android:layout_marginRight="14dp"
                     android:layout_toStartOf="@+id/linLayout2"
                     android:layout_toLeftOf="@+id/linLayout2"
-                    android:src="@drawable/perto" />
+                    android:src="@drawable/logo_perto" />
 
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/linLayout2"
-                android:layout_width="241dp"
+                android:layout_width="250dp"
                 android:layout_height="match_parent"
 
                 android:layout_alignParentEnd="true"
@@ -55,14 +55,6 @@
                 android:orientation="vertical"
                 android:padding="20dp">
 
-                <TextView
-                    android:id="@+id/display_cname"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="company name"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
                 <TextView
                     android:id="@+id/display_name"
                     android:layout_width="match_parent"
@@ -95,6 +87,7 @@
 
         </RelativeLayout>
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -125,9 +118,6 @@
 
 
         </LinearLayout>
-
-
-
         <TextView
             android:id="@+id/my"
             android:layout_width="match_parent"
@@ -135,12 +125,16 @@
             android:layout_marginTop="5dp"
             android:text="Mes Ammonces :"
             android:textColor="@color/blue"
+            android:layout_marginLeft="15dp"
             android:textSize="25sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rycycler_home"
             android:layout_width="match_parent"
-            android:layout_height="444dp">
+            android:layout_height="444dp"
+            android:background="@color/blue"
+            >
+
 
         </androidx.recyclerview.widget.RecyclerView>
 

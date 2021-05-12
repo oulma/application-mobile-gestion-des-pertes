@@ -1,4 +1,4 @@
-package com.ceft.perto.ui.dashboard;
+package com.ceft.perto.ui.Annonces;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,18 +11,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.ceft.perto.Model.Annonce;
 import com.ceft.perto.R;
-import com.ceft.perto.registerActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -33,7 +30,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class DashboardFragment extends Fragment {
+public class AnnoncesFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
     private EditText titre, description, ville,phone;
@@ -49,7 +46,7 @@ public class DashboardFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
                 new ViewModelProvider(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        View root = inflater.inflate(R.layout.fragment_annonces, container, false);
         //final TextView textView = root.findViewById(R.id.text_dashboard);
         Spinner spinner = (Spinner) root.findViewById(R.id.spinner_type);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(),
