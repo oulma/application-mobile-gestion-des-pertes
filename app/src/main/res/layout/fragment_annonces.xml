@@ -3,8 +3,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/grey"
+    android:background="@color/white"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ann_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="350dp"
+            android:text="Please login first.."
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            />
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Login"/>
+    </LinearLayout>
 
 
         <ScrollView
@@ -193,7 +217,7 @@
                             android:id="@+id/tel_ann"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:hint="Ville" />
+                            android:hint="Tel" />
 
 
                     </RelativeLayout>
@@ -231,9 +255,11 @@
 
                         <Button
                             android:id="@+id/btn_img"
-                            android:layout_width="match_parent"
+                            android:layout_width="100dp"
                             android:layout_height="match_parent"
                             android:text="Upload"
+                            android:backgroundTint="@color/blue"
+                            android:layout_marginLeft="100dp"
                             />
 
                     </RelativeLayout>
@@ -256,7 +282,8 @@
                        <ImageView
                            android:id="@+id/img_ann"
                            android:layout_width="match_parent"
-                           android:layout_height="match_parent"/>
+                           android:layout_height="match_parent"
+                           android:src="@drawable/ic_baseline_image_24"/>
 
                     </RelativeLayout>
 
@@ -278,9 +305,12 @@
 
                       <Button
                           android:id="@+id/btn_ann"
-                          android:layout_width="match_parent"
+                          android:layout_width="100dp"
                           android:layout_height="match_parent"
-                          android:text="Vlider"/>
+                          android:text="Vlider"
+                          android:backgroundTint="@color/blue"
+                          android:layout_marginLeft="100dp"
+                          />
 
 
                     </RelativeLayout>
