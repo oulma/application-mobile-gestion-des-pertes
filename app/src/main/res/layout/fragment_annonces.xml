@@ -174,9 +174,9 @@
                         android:id="@+id/ville_ann"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="    Ville"
-                        android:background="@drawable/blue_border_rounded_cornwe"
-                        android:ems="10"/>
+                        android:ems="10"
+                        android:layout_marginLeft="5dp"
+                        android:hint="    Ville"/>
 
 
                 </RelativeLayout>
@@ -216,9 +216,10 @@
                         android:id="@+id/tel_ann"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:ems="10"
+                        android:layout_marginLeft="5dp"
                         android:hint="    Telephone"
-                        android:background="@drawable/blue_border_rounded_cornwe"
-                        android:ems="10"/>
+                        />
 
 
                 </RelativeLayout>
