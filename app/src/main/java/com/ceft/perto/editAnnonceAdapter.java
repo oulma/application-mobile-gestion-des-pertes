@@ -25,9 +25,9 @@ public class editAnnonceAdapter extends RecyclerView.Adapter<editAnnonceAdapter.
 
     ArrayList<Annonce> listAnn;
     Context context;
-    private FirebaseDatabase database ;
+    private FirebaseDatabase database;
     private FirebaseAuth auth;
-    private DatabaseReference uidref , myRef2;
+    private DatabaseReference uidref, myRef2;
 
     public editAnnonceAdapter(ArrayList<Annonce> listAnn, Context context) {
         this.listAnn = listAnn;
@@ -39,17 +39,17 @@ public class editAnnonceAdapter extends RecyclerView.Adapter<editAnnonceAdapter.
     @Override
     public editAnnonceViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_anonce,parent,false);
-        return new  editAnnonceAdapter.editAnnonceViewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_anonce, parent, false);
+        return new editAnnonceAdapter.editAnnonceViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull @NotNull editAnnonceViewHolder holder, int position) {
 
-        database= FirebaseDatabase.getInstance();
-        auth=FirebaseAuth.getInstance();
+        database = FirebaseDatabase.getInstance();
+        auth = FirebaseAuth.getInstance();
 
-        final Annonce ann=listAnn.get(position);
+        final Annonce ann = listAnn.get(position);
         holder.t1.setText(ann.getTitre());
         holder.t2.setText(ann.getType());
         holder.t3.setText(ann.getVille());
@@ -61,14 +61,14 @@ public class editAnnonceAdapter extends RecyclerView.Adapter<editAnnonceAdapter.
         holder.img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,editAnnonce.class);
-             //  String id = myRef2.getRef().getKey();
-              //  intent.putExtra("id",id);
-                intent.putExtra("imagename",ann.getImg_annomca());
-                intent.putExtra("Titre",ann.getTitre());
-                intent.putExtra("desc",ann.getDescription());
-                intent.putExtra("ville",ann.getVille());
-                intent.putExtra("tel",ann.getTel());
+                Intent intent = new Intent(context, editAnnonce.class);
+                //  String id = myRef2.getRef().getKey();
+                //  intent.putExtra("id",id);
+                intent.putExtra("imagename", ann.getImg_annomca());
+                intent.putExtra("Titre", ann.getTitre());
+                intent.putExtra("desc", ann.getDescription());
+                intent.putExtra("ville", ann.getVille());
+                intent.putExtra("tel", ann.getTel());
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
@@ -84,12 +84,13 @@ public class editAnnonceAdapter extends RecyclerView.Adapter<editAnnonceAdapter.
 
     public class editAnnonceViewHolder extends RecyclerView.ViewHolder {
         ImageView img;
-        TextView t1,t2,t3;
+        TextView t1, t2, t3;
+
         public editAnnonceViewHolder(@NonNull View itemView) {
             super(itemView);
-            img= itemView.findViewById(R.id.img1);
-            t1= itemView.findViewById(R.id.txt1);
-            t2= itemView.findViewById(R.id.txt2);
+            img = itemView.findViewById(R.id.img1);
+            t1 = itemView.findViewById(R.id.txt1);
+            t2 = itemView.findViewById(R.id.txt2);
             t3 = itemView.findViewById(R.id.txt3);
 
         }

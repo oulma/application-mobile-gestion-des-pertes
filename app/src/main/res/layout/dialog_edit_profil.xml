@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
@@ -8,6 +7,7 @@
     android:layout_gravity="center"
 
     android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +15,8 @@
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="@color/blue"
-        android:textSize="50dp"/>
+        android:textSize="50dp" />
+
     <LinearLayout
 
         android:layout_margin="10dp"
@@ -28,28 +29,43 @@
             android:layout_height="wrap_content"
             android:text="Nom complet :"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
+
         <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
             android:id="@+id/editfulname"
             android:layout_marginStart="20dp"
             android:padding="10dp"
-            android:layout_marginLeft="20dp">
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/username_icon"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingLeft="17dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textSize="12sp">
 
         </EditText>
     </LinearLayout>
+
     <LinearLayout
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email :"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
+
         <EditText
             android:layout_width="250dp"
             android:layout_height="wrap_content"
@@ -60,17 +76,20 @@
 
         </EditText>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="10dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Password:"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
+
         <EditText
             android:layout_width="250dp"
             android:id="@+id/editpasse"
@@ -86,14 +105,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="10dp"
-        >
+        android:layout_margin="10dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Phone"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="20dp" />
+
         <EditText
             android:layout_width="250dp"
             android:layout_height="wrap_content"
@@ -104,6 +124,7 @@
 
         </EditText>
     </LinearLayout>
+
     <Button
         android:layout_width="150dp"
         android:layout_height="50dp"
@@ -113,5 +134,5 @@
         android:backgroundTint="@color/blue"
         android:gravity="center"
         android:layout_marginTop="50dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center" />
 </LinearLayout>

@@ -2,25 +2,29 @@ package com.ceft.perto.Model;
 
 public class Annonce {
 
-     private String  iduser, titre , type,ville, description,Tel,img_annomca;
+    private String iduser, titre, type, ville, description, Tel, img_annomca;
 
 
-     public Annonce(){};
-
-    public Annonce(String iduser, String titre, String type,String description,String ville, String img_annomca,String Tel) {
-        this.iduser=iduser;
-        this.titre = titre;
-        this.type = type;
-        this.description= description;
-        this.ville=ville;
-        this.img_annomca = img_annomca;
-        this.Tel= Tel;
+    public Annonce() {
     }
-    public Annonce(String titre, String type,String ville, String img_annomca) {
+
+    ;
+
+    public Annonce(String iduser, String titre, String type, String description, String ville, String img_annomca, String Tel) {
+        this.iduser = iduser;
         this.titre = titre;
-        this.description= description;
         this.type = type;
-        this.ville=ville;
+        this.description = description;
+        this.ville = ville;
+        this.img_annomca = img_annomca;
+        this.Tel = Tel;
+    }
+
+    public Annonce(String titre, String type, String ville, String img_annomca) {
+        this.titre = titre;
+        this.description = description;
+        this.type = type;
+        this.ville = ville;
         this.img_annomca = img_annomca;
     }
 

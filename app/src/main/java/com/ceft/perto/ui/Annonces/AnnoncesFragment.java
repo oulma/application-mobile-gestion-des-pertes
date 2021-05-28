@@ -33,14 +33,14 @@ import com.google.firebase.storage.UploadTask;
 public class AnnoncesFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
-    private EditText titre, description, ville,phone;
+    private EditText titre, description, ville, phone;
     private ImageView ann_img;
-    private Button btn_img,btn_ann;
+    private Button btn_img, btn_ann;
     Uri selectedImage;
     FirebaseAuth auth;
     FirebaseDatabase database;
     FirebaseStorage storage;
-    private DatabaseReference myRef ;
+    private DatabaseReference myRef;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -53,17 +53,17 @@ public class AnnoncesFragment extends Fragment {
                 R.array.type_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-        auth=FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();
         storage = FirebaseStorage.getInstance();
         database = FirebaseDatabase.getInstance();
 
-       titre= root.findViewById(R.id.titre_ann);
-        description= root.findViewById(R.id.desc_ann);
-        ville= root.findViewById(R.id.ville_ann);
-        ann_img= root.findViewById(R.id.img_ann);
-        phone= root.findViewById(R.id.tel_ann);
-        btn_ann=root.findViewById(R.id.btn_ann);
-        btn_img=root.findViewById(R.id.btn_img);
+        titre = root.findViewById(R.id.titre_ann);
+        description = root.findViewById(R.id.desc_ann);
+        ville = root.findViewById(R.id.ville_ann);
+        ann_img = root.findViewById(R.id.img_ann);
+        phone = root.findViewById(R.id.tel_ann);
+        btn_ann = root.findViewById(R.id.btn_ann);
+        btn_img = root.findViewById(R.id.btn_img);
 
         btn_img.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,7 +119,7 @@ public class AnnoncesFragment extends Fragment {
                                     @Override
                                     public void onSuccess(Uri uri) {
                                         String imageUrl = uri.toString();
-                                        String uId= auth.getCurrentUser().getUid();
+                                        String uId = auth.getCurrentUser().getUid();
 
                                         String titre_ann = titre.getText().toString();
                                         String desc_ann = description.getText().toString();
@@ -127,7 +127,7 @@ public class AnnoncesFragment extends Fragment {
                                         String type = spinner.getSelectedItem().toString();
                                         String phone_ann = phone.getText().toString();
 
-                                        Annonce annonce = new Annonce(uId,titre_ann,type,desc_ann, ville_ann, imageUrl, phone_ann);
+                                        Annonce annonce = new Annonce(uId, titre_ann, type, desc_ann, ville_ann, imageUrl, phone_ann);
                                         myRef = database.getReference("annances");
                                         String rvID = myRef.push().getKey();
 
@@ -146,7 +146,7 @@ public class AnnoncesFragment extends Fragment {
                 } else {
                     String uid = auth.getCurrentUser().getUid();
 
-                    Annonce annonce = new Annonce(uid,titre_ann, type, desc_ann, ville_ann, "no image", phone_ann);
+                    Annonce annonce = new Annonce(uid, titre_ann, type, desc_ann, ville_ann, "no image", phone_ann);
 
                     database.getReference()
                             .child("annonces")
@@ -163,8 +163,7 @@ public class AnnoncesFragment extends Fragment {
 
             }
 
-            });
-
+        });
 
 
         return root;
@@ -175,10 +174,10 @@ public class AnnoncesFragment extends Fragment {
         super.onActivityResult(requestCode, resultCode, data);
 
 
-        if (data!=null){
+        if (data != null) {
 
-            if (data.getData() != null){
-                selectedImage=data.getData();
+            if (data.getData() != null) {
+                selectedImage = data.getData();
 
                 ann_img.setImageURI(data.getData());
 

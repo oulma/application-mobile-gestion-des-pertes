@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide;
 public class annonceDetailActivity extends AppCompatActivity {
 
     ImageView img;
-    TextView tv1,tv2,tv3,tv4;
+    TextView tv1, tv2, tv3, tv4;
     Context context;
 
     @Override
@@ -21,17 +21,17 @@ public class annonceDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_annonce_detail);
 
-        img=(ImageView)findViewById(R.id.ann_img);
-        tv1=(TextView)findViewById(R.id.ann_titre);
-        tv2=(TextView)findViewById(R.id.ann_desc);
-        tv3=(TextView)findViewById(R.id.ann_ville);
-        tv4=(TextView)findViewById(R.id.ann_contact);
+        img = (ImageView) findViewById(R.id.ann_img);
+        tv1 = (TextView) findViewById(R.id.ann_titre);
+        tv2 = (TextView) findViewById(R.id.ann_desc);
+        tv3 = (TextView) findViewById(R.id.ann_ville);
+        tv4 = (TextView) findViewById(R.id.ann_contact);
 
         Glide.with(this)
                 .load(getIntent().getStringExtra("imagename"))
                 .placeholder(R.mipmap.ic_launcher)
                 .into(img);
-       // img.setImageResource(getIntent().getStringExtra("imagename"));
+        // img.setImageResource(getIntent().getStringExtra("imagename"));
         tv1.setText(getIntent().getStringExtra("Titre"));
         tv2.setText(getIntent().getStringExtra("desc"));
         tv3.setText(getIntent().getStringExtra("ville"));

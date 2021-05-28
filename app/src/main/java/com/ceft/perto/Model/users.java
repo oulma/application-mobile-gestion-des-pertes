@@ -1,14 +1,17 @@
 package com.ceft.perto.Model;
 
 public class users {
-    private String  fullname,email,password,phone,id;
+    private String fullname, email, password, phone, id;
     //private int phone;
 
-    public users(){};
+    public users() {
+    }
+
+    ;
 
 
     public users(String id, String fullname, String email, String password, String phone) {
-        this.id=id;
+        this.id = id;
         this.fullname = fullname;
         this.email = email;
         this.password = password;

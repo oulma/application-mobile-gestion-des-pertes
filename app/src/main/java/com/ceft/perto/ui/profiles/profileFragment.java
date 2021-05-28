@@ -38,20 +38,20 @@ public class profileFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;
 
-    TextView name , email , tel;
+    TextView name, email, tel;
 
-    private FirebaseDatabase database ;
+    private FirebaseDatabase database;
     private FirebaseAuth auth;
-    private DatabaseReference uidref , myRef2;
-    private FirebaseDatabase mDatabase ;
-    private DatabaseReference myRef ;
+    private DatabaseReference uidref, myRef2;
+    private FirebaseDatabase mDatabase;
+    private DatabaseReference myRef;
     private Query qr;
     private FirebaseAuth mAuth;
     private RecyclerView rv;
-    String userid ;
+    String userid;
     String usId;
-    Button btn_edit ;
-    String fn ,mail ,phn ,passwrd ;
+    Button btn_edit;
+    String fn, mail, phn, passwrd;
     ArrayList<Annonce> listAnn;
 
 
@@ -62,13 +62,13 @@ public class profileFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
         rv = root.findViewById(R.id.rycycler_home);
 
-        mAuth=FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         FirebaseUser mUser = mAuth.getCurrentUser();
         usId = mUser.getUid();
         mDatabase = FirebaseDatabase.getInstance();
         myRef = mDatabase.getReference("annances");
         qr = myRef.orderByChild("iduser").equalTo(usId);
-        listAnn= new ArrayList<>();
+        listAnn = new ArrayList<>();
 
         qr.addValueEventListener(new ValueEventListener() {
             @Override
@@ -76,16 +76,16 @@ public class profileFragment extends Fragment {
                 listAnn.clear();
 
 
-                for (DataSnapshot dataSnapshot1:snapshot.getChildren()){
+                for (DataSnapshot dataSnapshot1 : snapshot.getChildren()) {
                     Annonce annonce = dataSnapshot1.getValue(Annonce.class);
                     listAnn.add(annonce);
 
                 }
 
                 Collections.reverse(listAnn);
-               AnnanceAdapter adapter= new AnnanceAdapter(listAnn,getContext());
+                AnnanceAdapter adapter = new AnnanceAdapter(listAnn, getContext());
                 rv.setAdapter(adapter);
-                GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),1);
+                GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1);
                 rv.setLayoutManager(gridLayoutManager);
 
 
@@ -98,20 +98,20 @@ public class profileFragment extends Fragment {
 
             }
         });
-      //  GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),1);
-       // rv.setLayoutManager(gridLayoutManager);
+        //  GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),1);
+        // rv.setLayoutManager(gridLayoutManager);
 
         //////////////////////////////////////
 
 
         name = root.findViewById(R.id.display_name);
-        email =root.findViewById(R.id.display_email);
+        email = root.findViewById(R.id.display_email);
         tel = root.findViewById(R.id.display_tel);
         btn_edit = root.findViewById(R.id.btn_ediit);
 
-        database= FirebaseDatabase.getInstance();
+        database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference("userBUSINESS");
-        auth=FirebaseAuth.getInstance();
+        auth = FirebaseAuth.getInstance();
         FirebaseUser user = auth.getCurrentUser();
         String UId = user.getUid();
 
@@ -122,12 +122,12 @@ public class profileFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 fn = snapshot.child("fullname").getValue(String.class);
-                name.setText("Nom complet : "+fn);
+                name.setText("Nom complet : " + fn);
                 mail = snapshot.child("email").getValue(String.class);
-                email.setText("email:  "+mail);
+                email.setText("email:  " + mail);
                 passwrd = snapshot.child("password").getValue(String.class);
                 phn = snapshot.child("phone").getValue(String.class);
-                tel.setText("Tel:  "+phn);
+                tel.setText("Tel:  " + phn);
 
             }
 
@@ -146,22 +146,19 @@ public class profileFragment extends Fragment {
         });
 
 
-
-
-
         return root;
     }
 
 
     public void customdial() {
-        EditText fullname,email,number ,passw;
+        EditText fullname, email, number, passw;
         Button edit;
-        AlertDialog.Builder mydialog =new AlertDialog.Builder(getContext());
+        AlertDialog.Builder mydialog = new AlertDialog.Builder(getContext());
 
-      LayoutInflater  inflater=LayoutInflater.from(getContext());
-        View myview=inflater.inflate(R.layout.dialog_edit_profil,null);
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View myview = inflater.inflate(R.layout.dialog_edit_profil, null);
 
-        final AlertDialog dialog=mydialog.create();
+        final AlertDialog dialog = mydialog.create();
         dialog.setView(myview);
 
         fullname = myview.findViewById(R.id.editfulname);
@@ -180,19 +177,19 @@ public class profileFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if (TextUtils.isEmpty(fullname.getText().toString())){
+                if (TextUtils.isEmpty(fullname.getText().toString())) {
                     fullname.setError("Field required... ");
                     return;
                 }
-                if (TextUtils.isEmpty(passw.getText().toString())){
+                if (TextUtils.isEmpty(passw.getText().toString())) {
                     passw.setError("Field required... ");
                     return;
                 }
-                if (TextUtils.isEmpty(email.getText().toString())){
+                if (TextUtils.isEmpty(email.getText().toString())) {
                     email.setError("Field required... ");
                     return;
                 }
-                if (TextUtils.isEmpty(number.getText().toString())){
+                if (TextUtils.isEmpty(number.getText().toString())) {
                     number.setError("Field required... ");
                     return;
                 }
@@ -210,6 +207,7 @@ public class profileFragment extends Fragment {
 
 
                     }
+
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
 

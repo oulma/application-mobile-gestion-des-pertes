@@ -5,14 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="225dp"
             android:background="@drawable/blue_bg">
+
             <TextView
                 android:layout_width="235dp"
                 android:layout_height="77dp"
@@ -20,8 +23,10 @@
                 android:layout_marginTop="85dp"
                 android:text="Register"
                 android:textSize="60dp"
-                android:textColor="@color/white"/>
-        </FrameLayout>>
+                android:textColor="@color/white" />
+        </FrameLayout>
+        >
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,6 +58,7 @@
                 android:layout_marginLeft="17dp"
                 android:src="@drawable/user" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,6 +91,7 @@
                 android:layout_marginLeft="17dp"
                 android:src="@drawable/phone" />
         </RelativeLayout>
+
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyle"
@@ -124,6 +131,7 @@
                 android:layout_marginLeft="17dp"
                 android:src="@drawable/email" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -157,6 +165,7 @@
                 android:layout_marginLeft="17dp"
                 android:src="@drawable/password" />
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -190,6 +199,7 @@
                 android:layout_marginLeft="17dp"
                 android:src="@drawable/password" />
         </RelativeLayout>
+
         <TextView
             android:id="@+id/btnregister"
             android:layout_width="match_parent"
@@ -208,7 +218,6 @@
             android:textSize="12sp" />
 
 
-
     </LinearLayout>
 
     <LinearLayout
@@ -216,12 +225,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

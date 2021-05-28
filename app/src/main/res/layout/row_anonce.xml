@@ -6,16 +6,20 @@
     app:cardCornerRadius="5dp"
     android:elevation="4dp"
     app:cardUseCompatPadding="true">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:outlineSpotShadowColor="@color/browser_actions_bg_grey">
+
         <ImageView
             android:layout_width="350dp"
             android:layout_centerHorizontal="true"
             android:layout_height="150dp"
             android:src="@mipmap/ic_launcher"
-            android:id="@+id/img1"/>
+            android:id="@+id/img1" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,6 +33,7 @@
             android:textColor="#000"
 
             />
+
         <TextView
 
             android:layout_width="match_parent"
@@ -41,6 +46,7 @@
             android:textColor="#000"
 
             />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

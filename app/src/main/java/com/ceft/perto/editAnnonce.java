@@ -14,20 +14,20 @@ import com.google.firebase.database.Query;
 
 public class editAnnonce extends AppCompatActivity {
 
-    TextView name , email , tel;
+    TextView name, email, tel;
 
-    private FirebaseDatabase database ;
+    private FirebaseDatabase database;
     private FirebaseAuth auth;
-    private DatabaseReference uidref , myRef2;
-    private FirebaseDatabase mDatabase ;
-    private DatabaseReference myRef ;
+    private DatabaseReference uidref, myRef2;
+    private FirebaseDatabase mDatabase;
+    private DatabaseReference myRef;
     private Query qr;
     private FirebaseAuth mAuth;
     private RecyclerView rv;
-    String userid ;
+    String userid;
     String usId;
-    Button btn_edit ;
-    String fn ,mail ,phn , usname,ccname ;
+    Button btn_edit;
+    String fn, mail, phn, usname, ccname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
