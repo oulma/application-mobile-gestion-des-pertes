@@ -122,12 +122,12 @@ public class profileFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 fn = snapshot.child("fullname").getValue(String.class);
-                name.setText("Nom complet : " + fn);
+                name.setText("" + fn);
                 mail = snapshot.child("email").getValue(String.class);
-                email.setText("email:  " + mail);
+                email.setText("" + mail);
                 passwrd = snapshot.child("password").getValue(String.class);
                 phn = snapshot.child("phone").getValue(String.class);
-                tel.setText("Tel:  " + phn);
+                tel.setText("" + phn);
 
             }
 

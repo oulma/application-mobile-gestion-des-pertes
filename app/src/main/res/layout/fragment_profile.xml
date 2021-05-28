@@ -44,7 +44,7 @@
 
             <LinearLayout
                 android:id="@+id/linLayout2"
-                android:layout_width="250dp"
+                android:layout_width="264dp"
                 android:layout_height="match_parent"
 
                 android:layout_alignParentEnd="true"
@@ -54,32 +54,82 @@
                 android:orientation="vertical"
                 android:padding="20dp">
 
-                <TextView
-                    android:id="@+id/display_name"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fullname"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/display_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="Email"
-                    android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    <ImageView
+                        android:id="@+id/username_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_person" />
 
-                <TextView
-                    android:id="@+id/display_tel"
-                    android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/display_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="Fullname"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="Phone"
-                    android:textColor="@color/blue"
-                    android:textSize="16sp" />
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_email" />
+
+                    <TextView
+                        android:id="@+id/display_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Email"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_phone" />
+
+                    <TextView
+                        android:id="@+id/display_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Phone"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginRight="6dp"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
 
 
             </LinearLayout>
@@ -124,9 +174,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="Mes Ammonces :"
+            android:text="Mes Annonces :"
             android:textColor="@color/blue"
             android:layout_marginLeft="15dp"
+            android:textStyle="bold|italic"
+
             android:textSize="25sp" />
 
         <androidx.recyclerview.widget.RecyclerView
