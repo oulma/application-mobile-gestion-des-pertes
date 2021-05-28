@@ -9,7 +9,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:outlineSpotShadowColor="@color/grey">
         <ImageView
             android:layout_width="350dp"
             android:layout_centerHorizontal="true"
@@ -52,6 +53,7 @@
             android:textColor="#000"
 
             />
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

@@ -19,11 +19,12 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ceft.perto.AnnanceAdapter;
+import com.ceft.perto.editAnnonceAdapter;
 import com.ceft.perto.LoginActivity;
 import com.ceft.perto.Model.Annonce;
 import com.ceft.perto.R;
 import com.ceft.perto.ui.home.HomeFragment;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -45,7 +46,6 @@ public class profileFragment extends Fragment {
     TextView name , email , tel;
     private LinearLayout txtlogin,profile;
     FirebaseUser user;
-
     private FirebaseDatabase database ;
     private FirebaseAuth auth;
     private DatabaseReference uidref , myRef2;
@@ -59,6 +59,7 @@ public class profileFragment extends Fragment {
     Button btn_edit,btn_logout,btn_login ;
     String fn ,mail ,phn ,passwrd ;
     ArrayList<Annonce> listAnn;
+    private editAnnonceAdapter adapter;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -72,6 +73,8 @@ public class profileFragment extends Fragment {
     //    user = auth.getCurrentUser();
         mAuth=FirebaseAuth.getInstance();
         FirebaseUser mUser = mAuth.getCurrentUser();
+
+
         if (mUser !=null) {
         usId = mUser.getUid();
         mDatabase = FirebaseDatabase.getInstance();
@@ -82,34 +85,17 @@ public class profileFragment extends Fragment {
             profile.setVisibility(View.VISIBLE);
             txtlogin.setVisibility(View.GONE);
 
-            qr.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                    listAnn.clear();
+            FirebaseRecyclerOptions<Annonce> options =
+                    new FirebaseRecyclerOptions.Builder<Annonce>()
+                            .setQuery(qr, Annonce.class)
+                            .build();
+             adapter = new editAnnonceAdapter(options,getContext());
+            rv.setAdapter(adapter);
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1);
+            rv.setLayoutManager(gridLayoutManager);
 
 
-                    for (DataSnapshot dataSnapshot1 : snapshot.getChildren()) {
-                        Annonce annonce = dataSnapshot1.getValue(Annonce.class);
-                        listAnn.add(annonce);
 
-                    }
-
-                    Collections.reverse(listAnn);
-                    AnnanceAdapter adapter = new AnnanceAdapter(listAnn, getContext());
-                    rv.setAdapter(adapter);
-                    GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1);
-                    rv.setLayoutManager(gridLayoutManager);
-
-
-                }
-
-                @Override
-                public void onCancelled(@NonNull @NotNull DatabaseError error) {
-                    Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_LONG).show();
-
-
-                }
-            });
             //  GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),1);
             // rv.setLayoutManager(gridLayoutManager);
 
@@ -264,5 +250,14 @@ public class profileFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        adapter.startListening();
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapter.stopListening();
+
     }
 }
