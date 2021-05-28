@@ -60,6 +60,7 @@ public class profileFragment extends Fragment {
     String fn ,mail ,phn ,passwrd ;
     ArrayList<Annonce> listAnn;
     private editAnnonceAdapter adapter;
+    private FirebaseUser mUser;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -72,7 +73,7 @@ public class profileFragment extends Fragment {
         profile = root.findViewById(R.id.prof);
     //    user = auth.getCurrentUser();
         mAuth=FirebaseAuth.getInstance();
-        FirebaseUser mUser = mAuth.getCurrentUser();
+         mUser = mAuth.getCurrentUser();
 
 
         if (mUser !=null) {
@@ -249,15 +250,24 @@ public class profileFragment extends Fragment {
 
     @Override
     public void onStart() {
-        super.onStart();
-        adapter.startListening();
+            super.onStart();
+        mAuth=FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        if (mUser !=null) {
+            adapter.startListening();
+        }
 
     }
 
     @Override
     public void onStop() {
         super.onStop();
+        mAuth=FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        if (mUser !=null) {
         adapter.stopListening();
+        }
+
 
     }
 }

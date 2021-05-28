@@ -162,7 +162,7 @@ public class editAnnonceAdapter extends FirebaseRecyclerAdapter<Annonce, editAnn
             @Override
             public void onClick(View view) {
                 AlertDialog.Builder builder=new AlertDialog.Builder(holder.delet.getContext());
-                builder.setTitle("Delete Panel");
+                builder.setTitle("Delete Annonce");
                 builder.setMessage("Delete...?");
 
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
