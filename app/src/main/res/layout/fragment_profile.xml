@@ -1,21 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ann_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="350dp"
+            android:text="Please login first.."
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            />
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Login"/>
+    </LinearLayout>
+
+
+<ScrollView
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fitsSystemWindows="true">
 
 
     <LinearLayout
+        android:id="@+id/prof"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-        </LinearLayout>
+
 
         <RelativeLayout
             android:id="@+id/relLayout2"
@@ -184,6 +215,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rycycler_home"
             android:layout_width="match_parent"
+            android:layout_marginBottom="60dp"
             android:layout_height="444dp"
             android:background="@color/blue">
 
@@ -195,3 +227,9 @@
 
 
 </ScrollView>
+
+
+
+
+</LinearLayout>
+
