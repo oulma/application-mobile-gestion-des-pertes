@@ -175,21 +175,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             myRef = database.getReference("users");
                             String id = mAuth.getCurrentUser().getUid();
                             Log.i(TAG, "onComplete: login completed with user: " + user.getDisplayName());
-                        //    users User = new users(id, user.getDisplayName(), user.getEmail(), null, user.getPhoneNumber());
+                            users User = new users(id, user.getDisplayName(), user.getEmail(), null, user.getPhoneNumber());
 
-                            myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                            myRef.child(id).setValue(User).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
-                                public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                                    myRef.child("fullname").setValue(user.getDisplayName());
-                                    myRef.child("password").setValue(null);
-                                    myRef.child("email").setValue(user.getEmail());
-                                    myRef.child("phone").setValue(user.getPhoneNumber());
-                                    Toast.makeText(LoginActivity.this, "Edited successfully", Toast.LENGTH_SHORT).show();
+                                public void onComplete(@NonNull Task<Void> task) {
 
-                                }
-
-                                @Override
-                                public void onCancelled(@NonNull @NotNull DatabaseError error) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(LoginActivity.this, "votre compte a ete cree avec succes", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
+                                    } else {
+                                        Toast.makeText(LoginActivity.this, "erreur try again", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
+                                    }
 
                                 }
                             });
