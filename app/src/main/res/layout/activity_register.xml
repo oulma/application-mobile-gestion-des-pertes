@@ -92,12 +92,6 @@
                 android:src="@drawable/phone" />
         </RelativeLayout>
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="match_parent"
-            android:visibility="gone"
-            android:layout_height="wrap_content" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -243,25 +237,12 @@
                 android:textSize="13.3sp" />
         </LinearLayout>
 
-        <LinearLayout
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20.5dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
 
-            <ImageView
-                android:layout_width="26.7dp"
-                android:layout_height="26.7dp"
-                android:src="@drawable/fb" />
-
-            <ImageView
-                android:layout_width="26.7dp"
-                android:layout_height="26.7dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:src="@drawable/instagram" />
-
-        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

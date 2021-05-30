@@ -2,9 +2,10 @@
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-
-android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    >
 
 
     <LinearLayout
@@ -13,73 +14,73 @@ android:layout_height="match_parent"
         android:layout_margin="10dp"
         android:padding="10dp"
         android:layout_gravity="center"
-
         android:orientation="vertical">
-
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Editer Annonce"
-        android:gravity="center"
-        android:textStyle="bold"
+        android:gravity="left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold|italic"
         android:textColor="@color/blue"
-        android:textSize="50dp"/>
+        android:textSize="20dp"
+        android:text="Edit Annonce"
+     />
     <LinearLayout
 
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Titre :"
+            android:text="Title :"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="15dp"/>
         <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
             android:id="@+id/edit_titre"
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:padding="10dp"
-            android:layout_marginLeft="20dp">
-
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
         </EditText>
     </LinearLayout>
     <LinearLayout
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Type :"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="15dp"/>
         <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
             android:id="@+id/edit_type"
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:padding="10dp"
-            android:layout_marginLeft="20dp">
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
 
         </EditText>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_margin="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Description:"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="15dp"/>
         <EditText
             android:layout_width="match_parent"
             android:id="@+id/edit_desc"
@@ -87,52 +88,49 @@ android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:padding="10dp"
             android:layout_marginLeft="20dp">
-
         </EditText>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="10dp"
-        >
+        android:orientation="vertical"
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ville"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="15dp"/>
+
         <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
             android:id="@+id/edit_ville"
-            android:layout_marginStart="55dp"
-            android:padding="10dp"
-            android:layout_marginLeft="55dp">
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
 
         </EditText>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="10dp"
-        >
+        android:orientation="vertical"
+        android:layout_margin="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tel :"
+            android:text="Tele :"
             android:textColor="@color/black"
-            android:textSize="20dp"/>
+            android:textSize="15dp"/>
         <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
             android:id="@+id/edit_tel"
-            android:layout_marginStart="55dp"
-            android:padding="10dp"
-            android:layout_marginLeft="55dp">
-
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
         </EditText>
     </LinearLayout>
     <Button

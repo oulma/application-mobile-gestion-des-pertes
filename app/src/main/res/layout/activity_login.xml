@@ -37,7 +37,6 @@
             android:background="@drawable/blue_border_rounded_cornwe">
             <!-- INPUT -->
             <EditText
-                android:text="mahdi@gmail.com"
                 android:id="@+id/edtemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +70,6 @@
             android:background="@drawable/blue_border_rounded_cornwe">
             <!-- INPUT -->
             <EditText
-                android:text="mahdi12345"
                 android:id="@+id/edtpass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

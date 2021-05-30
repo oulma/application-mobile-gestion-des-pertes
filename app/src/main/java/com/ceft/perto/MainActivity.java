@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
        new Splashy(this)  // For JAVA : new Splashy(this)
                 .setLogo(R.drawable.perto_logo)
-                .setTitle("Perto").setTitleColor(R.color.black).setTitleSize(50)
+                .setTitle("")
                .setSubTitle("Welcome to Perto").setSubTitleColor(R.color.black).setSubTitleSize(35)
                .setProgressColor(R.color.white)
                .setBackgroundColor(R.color.white)

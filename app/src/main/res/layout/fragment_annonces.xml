@@ -55,7 +55,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Titre :"
+                    android:text="Title :"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
@@ -77,7 +77,7 @@
                         android:layout_height="match_parent"
                         android:ems="10"
                         android:layout_marginLeft="5dp"
-                        android:hint="    Titre"
+                        android:hint="    Title"
                         />
 
 
@@ -98,7 +98,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Type d`annance :"
+                    android:text=" Annonce type :"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
@@ -180,7 +180,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Ville :"
+                    android:text="City :"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
@@ -201,7 +201,7 @@
                         android:layout_height="match_parent"
                         android:ems="10"
                         android:layout_marginLeft="5dp"
-                        android:hint="    Ville"/>
+                        android:hint="    City"/>
 
 
                 </RelativeLayout>
@@ -220,7 +220,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Tel :"
+                    android:text="Phone :"
                     android:inputType="phone"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
@@ -243,7 +243,7 @@
                         android:layout_height="match_parent"
                         android:ems="10"
                         android:layout_marginLeft="5dp"
-                        android:hint="    Telephone"
+                        android:hint="    Phone"
                         />
 
 
@@ -264,7 +264,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-black"
-                    android:text="Ajouter un photo :"
+                    android:text=" Add Photo :"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
@@ -285,7 +285,8 @@
                         android:id="@+id/btn_img"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Upload" />
+                        android:text="Upload"
+                        android:backgroundTint="@color/blue"/>
 
                 </RelativeLayout>
 
@@ -325,7 +326,8 @@
                         android:id="@+id/btn_ann"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Vlider"
+                        android:text="Confirm"
+                        android:backgroundTint="@color/blue"
                         />
                 </RelativeLayout>
 

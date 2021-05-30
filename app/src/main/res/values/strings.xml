@@ -8,7 +8,7 @@
 
 
     <string-array name="type_array">
-        <item>Chercher</item>
-        <item>Trouver</item>
+        <item>Searcher</item>
+        <item>Finder</item>
     </string-array>
 </resources>

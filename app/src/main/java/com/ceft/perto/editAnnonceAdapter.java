@@ -187,15 +187,11 @@ public class editAnnonceAdapter extends FirebaseRecyclerAdapter<Annonce, editAnn
                 builder.show();
             }
         });
-
     }
-
-
-
     public class editAnnonceViewHolder extends RecyclerView.ViewHolder {
-        ImageView img;
+        ImageView img,edit,delet;
         TextView t1,t2,t3;
-        Button edit,delet;
+
         public editAnnonceViewHolder(@NonNull View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.img1);
@@ -204,8 +200,6 @@ public class editAnnonceAdapter extends FirebaseRecyclerAdapter<Annonce, editAnn
             t3 = itemView.findViewById(R.id.txt3);
             edit= itemView.findViewById(R.id.btn_edt);
             delet= itemView.findViewById(R.id.btn_delet);
-
-
         }
     }
 
