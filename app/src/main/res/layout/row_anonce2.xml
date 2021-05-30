@@ -65,25 +65,22 @@
             android:layout_centerHorizontal="true"
             android:textSize="18dp"
             android:layout_below="@id/txt3"
-            android:textColor="#000"
+            android:textColor="#000">
 
-            >
-            <Button
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_edit"
                 android:id="@+id/btn_edt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Edit"
-                android:layout_marginRight="75dp"
-                android:backgroundTint="@color/blue"/>
-            <Button
-                android:id="@+id/btn_delet"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Delet"
-                android:backgroundTint="@color/blue"/>
+                android:layout_marginRight="100dp"/>
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_trash"
+                android:id="@+id/btn_delet"/>
         </LinearLayout>
-
-
     </RelativeLayout>
-
 </androidx.cardview.widget.CardView>
