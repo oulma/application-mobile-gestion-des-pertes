@@ -3,6 +3,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Add Annonce</string>
     <string name="title_notifications">Profile</string>
+    <string name="facebook_app_id">3868050603263211</string>
+    <string name="fb_login_protocol_scheme">fb3868050603263211</string>
 
 
     <string-array name="type_array">

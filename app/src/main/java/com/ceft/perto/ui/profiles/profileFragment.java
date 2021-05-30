@@ -24,6 +24,7 @@ import com.ceft.perto.LoginActivity;
 import com.ceft.perto.Model.Annonce;
 import com.ceft.perto.R;
 import com.ceft.perto.ui.home.HomeFragment;
+import com.facebook.login.LoginManager;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -149,6 +150,7 @@ public class profileFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     FirebaseAuth.getInstance().signOut();
+                    LoginManager.getInstance().logOut();
 
                     HomeFragment nextFrag = new HomeFragment();
                     getActivity().getSupportFragmentManager().beginTransaction()
